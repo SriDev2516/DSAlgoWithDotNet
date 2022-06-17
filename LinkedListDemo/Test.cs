@@ -15,17 +15,17 @@ namespace LinkedListDemo
 
             linkedList.insertAtHead(10);
             linkedList.insertAtHead(20);
-            linkedList.insertAtHead(30);
-
-            linkedList.insertAtTail(100);                      
-
-            linkedList.displayLinkedList();
-
-            linkedList.reverseLinkedList(linkedList.head);
+            linkedList.insertAtHead(20);
+            linkedList.insertAtTail(10);                      
 
             linkedList.displayLinkedList();
 
-            linkedList.reverseWithRecursion(linkedList.head);
+            // linkedList.reverseLinkedList(linkedList.head);
+
+
+            // linkedList.reverseWithRecursion(linkedList.head);
+
+            linkedList.removeDuplicates(linkedList.head);
 
             linkedList.displayLinkedList();
 

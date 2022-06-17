@@ -59,7 +59,7 @@ namespace LinkedListDemo
         public void reverseLinkedList(LinkedListNode head)
         {
             LinkedListNode? listToDo = this.head.next;
-            var reversed = this.head;?
+            var reversed = this.head;
             reversed.next = null;
 
             while (listToDo != null)
@@ -76,7 +76,28 @@ namespace LinkedListDemo
             }
         }
 
+        public void removeDuplicates(LinkedListNode head)
+        {
+            if (head == null)
+            {
+                return;
+            }
+            HashSet<int?> dupSet = new HashSet<int?>();
+            dupSet.Add(head.data);
+            LinkedListNode curr = head;
+            while (curr.next != null)
+            {
+                if (dupSet.Contains(curr.next.data))
+                {
+                    curr.next = curr.next.next;
+                } else
+                {
+                    dupSet.Add(curr.next.data);
+                    curr = curr.next;
+                }
+            }
 
+        }
         public LinkedListNode reverseWithRecursion(LinkedListNode head)
         {
          //   [100, 10, 20, 30]
