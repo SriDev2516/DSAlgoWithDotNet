@@ -20,14 +20,13 @@ namespace LinkedListDemo
 
             linkedList.displayLinkedList();
 
-            // linkedList.reverseLinkedList(linkedList.head);
+            // linkedList.removeDuplicates(linkedList.head);
 
 
-            // linkedList.reverseWithRecursion(linkedList.head);
-
-            linkedList.removeDuplicates(linkedList.head);
+            linkedList.deleteNode(linkedList.head, 20);
 
             linkedList.displayLinkedList();
+
 
         }
     }
