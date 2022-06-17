@@ -115,9 +115,38 @@ namespace LinkedListDemo
             return reversedList;
         }
 
+        public LinkedListNode deleteNode(LinkedListNode head, int key)
+        {
+           
+                // TODO: Write - Your - Code
+                LinkedListNode curr = head;
+                LinkedListNode prev = null;
+
+                while (curr != null)
+                {
+                    if (curr.data == key)
+                    {
+                    if (curr == head)
+                    {
+                        head = head.next;
+                        this.head = head;
+                        curr = head;
+                    }
+                    else {
+                        prev.next = curr.next;
+                        curr=curr.next;
+                    }
+                    } else
+                    {
+                    prev = curr;
+                    curr = curr.next;
+                    }
+                }
+                return head;
+            }
         
 
-       public  void displayLinkedList()
+        public  void displayLinkedList()
         {
             var temp = this.head;
             StringBuilder res = new StringBuilder("[");
