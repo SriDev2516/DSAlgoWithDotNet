@@ -29,6 +29,11 @@ namespace LinkedListDemo
             }
         }
 
+        internal LinkedListNode GetHead()
+        {
+            return this.head;
+        }
+
         public void insertAtTail(int data)
         {
             if (this.head == null)
@@ -48,9 +53,9 @@ namespace LinkedListDemo
 
         public void createLinkedList(List<int> numbers)
         {
-            for (int i = 0; i < numbers.Count(); i++)
+            foreach (var item in numbers)
             {
-                insertAtTail(numbers[i]);
+                insertAtTail(item);
             }
 
             
@@ -143,8 +148,7 @@ namespace LinkedListDemo
                     }
                 }
                 return head;
-            }
-        
+            }        
 
         public  void displayLinkedList()
         {
@@ -165,7 +169,62 @@ namespace LinkedListDemo
 
             Console.WriteLine(res.ToString());
 
-            
+           
         }
+
+        public void SortLinkedListWithInsertionSort(LinkedListNode head)
+        {
+            LinkedListNode sortedList = head;
+            LinkedListNode current = null;
+            if (head != null)
+            {
+                current = head;
+
+            }
+
+            while (current.next != null)
+            {
+                if (current == head)
+                {
+                    sortedList = new LinkedListNode(current.data);
+                } else
+                {
+                    var currentNode = sortedList;
+                    while (currentNode != null)
+                    {
+                        if (currentNode.data < current.data);
+                    }
+                }
+            }
+
+        }
+
+
+        #region
+        //Test Methods
+        public void RemoveDuplicatesTest(LinkedListNode head)
+        {
+            HashSet<int> ints = new HashSet<int>();
+            ints.Add(head.data);
+            var currentNode = head;
+            while (currentNode.next != null)
+            {
+                if (ints.Contains((int)currentNode.next.data))
+                {
+                    currentNode.next = currentNode.next.next;
+                } else
+                {
+                    ints.Add((int)currentNode.next.data);
+                    currentNode = currentNode.next;
+
+                }
+            }
+
+            
+
+        }
+
+
+        #endregion
     }
 }

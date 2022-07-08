@@ -14,18 +14,21 @@ namespace LinkedListDemo
             LinkedList linkedList = new LinkedList();
 
             linkedList.insertAtHead(10);
-            linkedList.insertAtHead(20);
-            linkedList.insertAtHead(20);
-            linkedList.insertAtTail(10);                      
-
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtHead(10);
+            linkedList.insertAtTail(1000);
+            linkedList.createLinkedList(new List<int> { 10});
+            linkedList.GetHead();
+            linkedList.RemoveDuplicatesTest(linkedList.GetHead());
             linkedList.displayLinkedList();
 
-            // linkedList.removeDuplicates(linkedList.head);
-
-
-            linkedList.deleteNode(linkedList.head, 20);
-
-            linkedList.displayLinkedList();
 
 
         }
