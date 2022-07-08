@@ -54,6 +54,39 @@ namespace LinkedListDemo
             return this.head;
         }
 
+        public void CreateLinkedList(List<int> list)
+        {
+            if (list.Count() != 0)
+            {
+                foreach (var data in list)
+                {
+                    InsertAtTail(data);
+                }
+            }
+        }
+
+        public void ReverseLinkedList()
+        {
+            LinkedListNode listToDo = this.head.next;
+            LinkedListNode reverse = this.head;
+            reverse.next = null;
+
+            while (listToDo != null)
+            {
+                if (listToDo.next == null)
+                {
+                    this.head = listToDo;
+                }
+                var temp = listToDo;
+                listToDo = listToDo.next;
+
+                temp.next = reverse;
+                reverse = temp;
+            }
+
+            this.head = reverse;
+        }
+
         public void DiaplayLinkedList(LinkedListNode head)
         {
             if (head == null)
