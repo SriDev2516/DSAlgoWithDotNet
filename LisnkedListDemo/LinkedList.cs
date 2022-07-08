@@ -31,9 +31,60 @@ namespace LinkedListDemo
             }
         }
 
+        public void InsertAtTail(int data)
+        {
+            if(this.head == null)
+            {
+                this.head = new LinkedListNode(data);
+            }
+            else
+            {
+                var currentNode = this.head;
+                while(currentNode.next != null)
+                {
+                    currentNode = currentNode.next;
+                }
+                var newNode = new LinkedListNode(data);
+                currentNode.next = newNode;
+            }
+        }
+
         public LinkedListNode GetHead()
         {
             return this.head;
+        }
+
+        public void CreateLinkedList(List<int> list)
+        {
+            if (list.Count() != 0)
+            {
+                foreach (var data in list)
+                {
+                    InsertAtTail(data);
+                }
+            }
+        }
+
+        public void ReverseLinkedList()
+        {
+            LinkedListNode listToDo = this.head.next;
+            LinkedListNode reverse = this.head;
+            reverse.next = null;
+
+            while (listToDo != null)
+            {
+                if (listToDo.next == null)
+                {
+                    this.head = listToDo;
+                }
+                var temp = listToDo;
+                listToDo = listToDo.next;
+
+                temp.next = reverse;
+                reverse = temp;
+            }
+
+            this.head = reverse;
         }
 
         public void DiaplayLinkedList(LinkedListNode head)
