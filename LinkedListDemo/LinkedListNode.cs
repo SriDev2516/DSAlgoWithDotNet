@@ -8,7 +8,7 @@ namespace LinkedListDemo
 {
     public class LinkedListNode
     {
-        public int? data { get; set; }
+        public int data { get; set; }
         public LinkedListNode? next;
         public LinkedListNode? prev;
         public LinkedListNode? arbitraryNode;
@@ -19,6 +19,6 @@ namespace LinkedListDemo
                 this.arbitraryNode = null;
             }
 
-
+       
     }
 }
