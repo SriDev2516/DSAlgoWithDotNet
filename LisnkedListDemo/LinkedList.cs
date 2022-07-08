@@ -31,6 +31,24 @@ namespace LinkedListDemo
             }
         }
 
+        public void InsertAtTail(int data)
+        {
+            if(this.head == null)
+            {
+                this.head = new LinkedListNode(data);
+            }
+            else
+            {
+                var currentNode = this.head;
+                while(currentNode.next != null)
+                {
+                    currentNode = currentNode.next;
+                }
+                var newNode = new LinkedListNode(data);
+                currentNode.next = newNode;
+            }
+        }
+
         public LinkedListNode GetHead()
         {
             return this.head;

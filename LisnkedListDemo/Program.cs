@@ -16,6 +16,7 @@ namespace LisnkedListDemo
             list.InsertAtHead(100);
             list.InsertAtHead(300);
             list.InsertAtHead(800);
+            list.InsertAtTail(1000);
             var head = list.GetHead();
             list.DiaplayLinkedList(head);
 
