@@ -23,17 +23,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedList", "LinkedList", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListDemo", "LisnkedListDemo\LinkedListDemo.csproj", "{6C396DDA-670E-44FE-BAF2-E8ECA03F9D3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertAtPositionDemo", "InsertAtPositionDemo\InsertAtPositionDemo.csproj", "{7D9A8BDB-70A0-4B09-BD97-7E70ADC27705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertAtPositionDemo", "InsertAtPositionDemo\InsertAtPositionDemo.csproj", "{7D9A8BDB-70A0-4B09-BD97-7E70ADC27705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAnElementInArray", "SearchAnElementInArray\SearchAnElementInArray.csproj", "{711AE651-1768-4281-9F19-E5B1A08C2F7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchAnElementInArray", "SearchAnElementInArray\SearchAnElementInArray.csproj", "{711AE651-1768-4281-9F19-E5B1A08C2F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveAnElementFromArray", "RemoveAnElementFromArray\RemoveAnElementFromArray.csproj", "{67AA11EC-AC72-410C-8362-7758506D6D4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoveAnElementFromArray", "RemoveAnElementFromArray\RemoveAnElementFromArray.csproj", "{67AA11EC-AC72-410C-8362-7758506D6D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{F5C8423A-2472-4C20-8A54-68CE8AD6482A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{F5C8423A-2472-4C20-8A54-68CE8AD6482A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log2Base", "Log2Base", "{C6748805-EDA6-4717-A826-583097675EC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListConsole", "LinkedListConsole\LinkedListConsole.csproj", "{89D76C95-588A-4891-A4F8-D2002E374F78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListConsole", "LinkedListConsole\LinkedListConsole.csproj", "{89D76C95-588A-4891-A4F8-D2002E374F78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoubleLinkedList", "DoubleLinkedList", "{38DABB38-D200-459B-B95D-898C45072ACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoublyLinkedListConsole", "DoublyLinkedListConsole\DoublyLinkedListConsole.csproj", "{A60C4FA6-A05D-40A8-A489-2651B832BE28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log2Base", "Log2Base", "{2CA58000-23D8-434C-86D9-05DECE461819}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,10 @@ Global
 		{89D76C95-588A-4891-A4F8-D2002E374F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89D76C95-588A-4891-A4F8-D2002E374F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89D76C95-588A-4891-A4F8-D2002E374F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A60C4FA6-A05D-40A8-A489-2651B832BE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A60C4FA6-A05D-40A8-A489-2651B832BE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A60C4FA6-A05D-40A8-A489-2651B832BE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A60C4FA6-A05D-40A8-A489-2651B832BE28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +108,8 @@ Global
 		{F5C8423A-2472-4C20-8A54-68CE8AD6482A} = {246E7E9B-825B-4179-AD4A-203B8E4A90E7}
 		{C6748805-EDA6-4717-A826-583097675EC1} = {EF03775F-9454-447B-87F5-428890F3FD67}
 		{89D76C95-588A-4891-A4F8-D2002E374F78} = {C6748805-EDA6-4717-A826-583097675EC1}
+		{A60C4FA6-A05D-40A8-A489-2651B832BE28} = {2CA58000-23D8-434C-86D9-05DECE461819}
+		{2CA58000-23D8-434C-86D9-05DECE461819} = {38DABB38-D200-459B-B95D-898C45072ACE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3ECD128E-D2DF-4CBD-B5C2-61B76698B594}
