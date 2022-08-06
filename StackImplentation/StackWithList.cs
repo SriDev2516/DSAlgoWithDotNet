@@ -27,12 +27,19 @@ namespace StackImplentation
 
         public void Pop()
         {
-            var tempNode = head;
-            while (tempNode.next.next != null)
+            if (head == null)
             {
-                tempNode = tempNode.next;
+                Console.WriteLine($"Stack is empty");
             }
-            tempNode.next = null;
+            else
+            {
+                var tempNode = head;
+                while (tempNode.next.next != null)
+                {
+                    tempNode = tempNode.next;
+                }
+                tempNode.next = null;
+            }
         }
 
         public void Print()
