@@ -20,5 +20,13 @@ namespace LinkedListDemo
             this.prev = null;
             this.arbitrary = null;
         }
+
+        public LinkedListNode(int data, LinkedListNode next = null)
+        {
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+            this.arbitrary = null;
+        }
     }
 }

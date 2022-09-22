@@ -28,6 +28,7 @@ namespace LinkedListDemo
             linkedList.GetHead();
             linkedList.RemoveDuplicatesTest(linkedList.GetHead());
             linkedList.displayLinkedList();
+            linkedList.reverseLinkedList(linkedList.GetHead());
 
 
 

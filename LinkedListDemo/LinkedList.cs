@@ -63,22 +63,19 @@ namespace LinkedListDemo
 
         public void reverseLinkedList(LinkedListNode head)
         {
-            LinkedListNode? listToDo = this.head.next;
-            var reversed = this.head;
+            LinkedListNode listToDo = this.head.next;
+            LinkedListNode reversed = head;
             reversed.next = null;
 
-            while (listToDo != null)
+            while (listToDo.next != null)
             {
-                if (listToDo.next == null)
-                {
-                    this.head = listToDo;
-                }
-                var temp = listToDo;
                 listToDo = listToDo.next;
-
-                temp.next = reversed;
-                reversed = temp;
             }
+
+            var temp = listToDo;
+            temp.next = reversed;
+            this.head = temp;
+
         }
 
         public void removeDuplicates(LinkedListNode head)
