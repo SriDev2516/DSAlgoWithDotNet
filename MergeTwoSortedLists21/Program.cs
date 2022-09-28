@@ -12,7 +12,6 @@ namespace MergeTwoSortedLists21
 
             linkedList.DisplayLinkedList(MergeTwoLists(list1, list2));
         }
-
         public static ListNode MergeTwoLists(ListNode list1, ListNode list2)
         {
             if (list1 == null && list2 == null) return null;
