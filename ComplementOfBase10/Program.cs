@@ -6,23 +6,30 @@ namespace ComplementOfBase10
     {
         static void Main(string[] args)
         {
-            var result = FindComplementOfBase10(0);
+        //For a given positive number N in base - 10, return the complement of its binary
+        //representation as a base - 10 integer.
+
+        //Input: 8
+        //Output: 7
+        //Explanation: 8 is 1000 in binary, its complement is 0111 in binary,
+        //which is 7 in base - 10.
+        var result = FindComplementOfBase10(8);
+        Console.WriteLine(result);
         }
 
-
-        private static int FindComplementOfBase10(int num)
+        private static int FindComplementOfBase10(int v)
         {
-            int numOfBits = 0;
-            while(num >= 0)
+            int num = v;
+            int numberofbits = 0;
+            while(num > 0)
             {
-                numOfBits++;
                 num = num >> 1;
+                numberofbits++;
             }
 
-            int all_bits_set = (int)Math.Pow(2, numOfBits) - 1;
+            int all_set_bits = (int)Math.Pow(2, numberofbits) - 1;
 
-
-            return num * all_bits_set;
+            return all_set_bits ^ v;
         }
     }
 }

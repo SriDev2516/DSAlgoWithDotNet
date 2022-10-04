@@ -1,33 +1,36 @@
 ﻿using System;
+using System.Linq;
 
 namespace FindMissingNumberInArray
 {
     class Program
     {
+        //Given an array of n-1 integers in the range from 1 to n
+        //find the one number that is missing from the array.
+
+        //Input: 1, 5, 2, 6, 4
+        //Answer: 3
         static void Main(string[] args)
         {
-            FindMissingNumberWithXOR(new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 });
+            int result = FindTheMissingNumber(new int[] { 1, 5, 2, 6, 4 });
+            Console.WriteLine(result);
         }
 
-        public static int FindMissingNumberWithXOR(int[] nums)
+        private static int FindTheMissingNumber(int[] nums)
         {
+            int n = nums.Length+1;
             int x1 = 0;
-            int n = nums.Length + 1;
-
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                x1 = x1 ^ i;
+                x1 ^= i;
             }
 
-            int x2 = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                x2 = x2 ^ nums[i];
+                x1 ^= nums[i];
             }
 
-            return x1 ^ x2;
+            return x1;
         }
-
-        
     }
 }

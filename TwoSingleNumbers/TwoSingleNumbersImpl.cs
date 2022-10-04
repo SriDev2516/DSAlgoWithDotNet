@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TwoSingleNumbers
 {
@@ -8,20 +6,19 @@ namespace TwoSingleNumbers
     {
         public static int[] TwoSingleNumberFinder(int[] nums)
         {
-            int x = nums[0];
             int first = 0;
             int second = 0;
-
-            for (int i = 1; i < nums.Length; i++)
-            {
-                x = x ^ nums[i];
-            }
-
-            int rightMostBit = x & ~(x-1);
+            int num = 0;
 
             for (int i = 0; i < nums.Length; i++)
             {
-                if((rightMostBit & nums[i]) == 0)
+                num ^= nums[i];
+            }
+
+            int rightMostBit = num & ~(num - 1);
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if((nums[i] & rightMostBit) == 0)
                 {
                     first ^= nums[i];
                 }
