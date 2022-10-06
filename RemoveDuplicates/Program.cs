@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace RemoveDuplicates
 {
@@ -9,20 +10,22 @@ namespace RemoveDuplicates
             RemoveDuplicatesAndReturnArray(new int[] { 2, 3, 3, 3, 6, 9, 9 });
         }
 
-        private static void RemoveDuplicatesAndReturnArray(int[] arr)
+        private static void RemoveDuplicatesAndReturnArray(int[] nums)
         {
             int k = 0;
-            int nonduplicate = arr[0];
-            for (int i = 1; i < arr.Length; i++)
+            int nonduplicate = nums[0];
+            for(int i = 1; i < nums.Length; i++)
             {
-                if(arr[i] != nonduplicate)
+                if(nums[i] != nonduplicate)
                 {
                     k++;
-                    nonduplicate = arr[i];
-                    arr[k] = arr[i];
+                    nums[k] = nums[i];
+                    nonduplicate = nums[i];
+                    
                 }
-               
             }
+
+          var result =  nums.Take(k+1).ToArray();
         }
     }
 }

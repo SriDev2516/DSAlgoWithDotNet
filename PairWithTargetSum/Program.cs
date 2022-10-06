@@ -6,29 +6,41 @@ namespace PairWithTargetSum
     {
         static void Main(string[] args)
         {
-            //Mainly used if the array is sorted.
+        //Mainly used if the array is sorted.
+        //Given an array of sorted numbers and a target sum,
+        //find a pair in the array whose sum is equal to the given target.
+
+        //Input:[1, 2, 3, 4, 6], target = 6
+        //Output:[1, 3]
+        //Explanation: The numbers at index 1 and 3 add up to 6: 2 + 4 = 6
+
             var result = FindThePairWithTargetSum(new int[] { 1, 2, 3, 4, 5, 6 }, 6);
         }
 
-        private static int[] FindThePairWithTargetSum(int[] nums, int target_sum)
+        private static int[] FindThePairWithTargetSum(int[] arr, int target)
         {
-            int start = 0;
-            int end = nums.Length - 1;
+            int left = 0;
+            int right = arr.Length -1;
+            
 
-            while(start < end)
+            for (int i = 0; i < arr.Length; i++)
             {
-                var target = nums[start] + nums[end];
-                if (target == target_sum) return new int[] { start, end };
-                if(target < target_sum)
+                if(arr[left]  + arr[right] == target)
                 {
-                    start++;
+                    return new int[] { arr[left], arr[right] };
+                }
+
+                if(arr[left] + arr[right] > target)
+                {
+                    right--;
                 }
                 else
                 {
-                    end--;
+                    left++;
                 }
             }
-            return new int[] { -1, -1 };
+
+            return new int[2]; 
         }
     }
 }

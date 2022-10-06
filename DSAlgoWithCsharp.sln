@@ -147,7 +147,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoveAllInstancesOfAKey", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindSquaresOFASorrtedArray", "FindSquaresOFASorrtedArray\FindSquaresOFASorrtedArray.csproj", "{404B876C-FE8E-4274-9032-BC55E744D5ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipAMatrix", "FlipAMatrix\FlipAMatrix.csproj", "{8144387E-4027-46A4-8772-DF3C03187E1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlipAMatrix", "FlipAMatrix\FlipAMatrix.csproj", "{8144387E-4027-46A4-8772-DF3C03187E1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripletSumToZero", "TripletSumToZero\TripletSumToZero.csproj", "{7EF322D2-2048-4995-BB08-119C8DE78C4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -343,6 +345,10 @@ Global
 		{8144387E-4027-46A4-8772-DF3C03187E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8144387E-4027-46A4-8772-DF3C03187E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8144387E-4027-46A4-8772-DF3C03187E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF322D2-2048-4995-BB08-119C8DE78C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF322D2-2048-4995-BB08-119C8DE78C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF322D2-2048-4995-BB08-119C8DE78C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF322D2-2048-4995-BB08-119C8DE78C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -407,6 +413,7 @@ Global
 		{876F6221-D1D8-40BE-83FF-A2FBCB230F79} = {F08A1873-9D22-49D3-BE45-0D47179B7B88}
 		{404B876C-FE8E-4274-9032-BC55E744D5ED} = {F08A1873-9D22-49D3-BE45-0D47179B7B88}
 		{8144387E-4027-46A4-8772-DF3C03187E1F} = {F22CED9F-BCCF-4446-B972-BFE5CFCC411A}
+		{7EF322D2-2048-4995-BB08-119C8DE78C4F} = {F08A1873-9D22-49D3-BE45-0D47179B7B88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3ECD128E-D2DF-4CBD-B5C2-61B76698B594}
