@@ -5,7 +5,7 @@ namespace TripletSumToZero
 {
     internal class DisplayData
     {
-        internal static void Display(List<int[]> list)
+        public static void Display(List<int[]> list)
         {
             foreach (var arr in list)
             {

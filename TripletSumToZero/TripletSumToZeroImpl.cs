@@ -1,59 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace TripletSumToZero
 {
     public class TripletSumToZeroImpl
     {
-        List<int[]> list = new List<int[]>();
-
-       
+        List<int[]> list;
+     
         public List<int[]> FindTriplet(int[] arr)
         {
-            try
+            list = new List<int[]>();
+            Array.Sort(arr);
+            for (int i = 0; i < arr.Length; i++)
             {
-                list.Clear();
-                Array.Sort(arr);
-                for (int i = 0; i < arr.Length; i++)
+                if (i > 0 && arr[i] == arr[i-1])
                 {
-                    Search_TripLet_Pair(arr, -arr[i], i + 1);
+                    continue;
                 }
+                SearchPair(arr, -arr[i], i + 1);
+            }
 
-                return list;
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                //list.Clear();
-            }
-           
+            return list;
+          
         }
 
-        private void Search_TripLet_Pair(int[] arr, int target, int left)
+        private void SearchPair(int[] arr, int target, int left)
         {
-            var right = arr.Length - 1;
-
-            while (left < right)
+            int right = arr.Length - 1;
+            while(left < right)
             {
-                var sum = arr[left] + arr[right];
-                if (sum  == target)
+                int target_sum = arr[left] + arr[right];
+
+                if(target == target_sum)
                 {
                     list.Add(new int[] { -target, arr[left], arr[right] });
                     left++;
                     right--;
                 }
-                else if(sum < target)
+                else if(target_sum > target)
                 {
-                    left++;
+                    right--;
                 }
                 else
                 {
-                    right--;
+                    left++;
                 }
             }
         }
