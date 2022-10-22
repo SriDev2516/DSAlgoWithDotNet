@@ -18,18 +18,21 @@ namespace TreeImplementationDemo
             bst.root = bst.Insert(bst.root, 900);
             bst.root = bst.Insert(bst.root, 500);
 
-            var result1 =  bst.InOrderTraverseIteration(bst.root);
-            DisplayResult(result1);
-            var result2 = bst.InorderTraversalWithRecursion(bst.root);
-            DisplayResult(result2);
-            var preorderResultWithRecrusion = bst.PreOrderTraversalWithRecrusion(bst.root);
-            DisplayResult(preorderResultWithRecrusion);
-            var preorderResultWithIteration = bst.PreOrderTraversalWithIteration(bst.root);
-            DisplayResult(preorderResultWithIteration);
-            var postOrderTraversalWithIteration = bst.PostOrderTraversalWithIteration(bst.root);
-            DisplayResult(postOrderTraversalWithIteration);
-            var postOrderTraversalWithRecursion = bst.PostOrderTraversalWithRecursion(bst.root);
-            DisplayResult(postOrderTraversalWithRecursion);
+            HeightOfBST heightOfBST = new HeightOfBST();
+            heightOfBST.FindHeight(bst.root);
+
+            //var result1 =  bst.InOrderTraverseIteration(bst.root);
+            //DisplayResult(result1);
+            //var result2 = bst.InorderTraversalWithRecursion(bst.root);
+            //DisplayResult(result2);
+            //var preorderResultWithRecrusion = bst.PreOrderTraversalWithRecrusion(bst.root);
+            //DisplayResult(preorderResultWithRecrusion);
+            //var preorderResultWithIteration = bst.PreOrderTraversalWithIteration(bst.root);
+            //DisplayResult(preorderResultWithIteration);
+            //var postOrderTraversalWithIteration = bst.PostOrderTraversalWithIteration(bst.root);
+            //DisplayResult(postOrderTraversalWithIteration);
+            //var postOrderTraversalWithRecursion = bst.PostOrderTraversalWithRecursion(bst.root);
+            //DisplayResult(postOrderTraversalWithRecursion);
 
         }
 

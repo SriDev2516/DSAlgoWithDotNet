@@ -6,8 +6,8 @@ namespace RecursionHelper
     {
         static void Main(string[] args)
         {
-            Print1ToNWithoutLoop p = new Print1ToNWithoutLoop();
-            p.Print(5);
+            SumOfFirstNTerms sumOfFirstNTerms = new SumOfFirstNTerms();
+            var result = sumOfFirstNTerms.FindSum(5);
         }
     }
 }
