@@ -6,8 +6,9 @@ namespace RecursionHelper
     {
         static void Main(string[] args)
         {
-            SumOfFirstNTerms sumOfFirstNTerms = new SumOfFirstNTerms();
-            var result = sumOfFirstNTerms.FindSum(5);
+            ReverseOfAnArray reverseOfAnArray = new ReverseOfAnArray();
+            reverseOfAnArray.FindReverse(new int[] { -1, 4, 5, 6, 0, 3, 5 });
+
         }
     }
 }
